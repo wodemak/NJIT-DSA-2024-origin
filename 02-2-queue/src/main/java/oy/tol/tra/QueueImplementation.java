@@ -47,7 +47,7 @@ public class QueueImplementation<E> implements QueueInterface<E> {
         // TODO: Implement this
         if (rear >= 0) {
             E dequeuedElement = (E) itemArray[0]; // element at the front of the queue
-            // Shift the elements to the front
+        
             for (int i = 0; i < rear; i++) {
                 itemArray[i] = itemArray[i + 1];
             }
