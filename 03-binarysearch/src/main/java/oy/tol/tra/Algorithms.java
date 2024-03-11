@@ -75,7 +75,7 @@ public class Algorithms {
 
     }
 
-    public static <E extends Comparable<E>> void fastSort(E[] array, int begin, int end) {
+    public static <E extends Comparable<E>> void fastSort(E[] array) {
         quickSort(array, 0, array.length - 1);
     }
 
