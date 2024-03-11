@@ -6,9 +6,7 @@ public class Algorithms {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j].compareTo(array[j + 1]) > 0) {
-                    T temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    swap(array, j, j + 1);
                 }
             }
         }
@@ -19,11 +17,16 @@ public class Algorithms {
         int i = 0;
         int j = array.length - 1;
         while (i < j) {
-            T temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+            swap(array, i, j);
             i++;
             j--;
         }
     }
+
+    private static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    
 }
