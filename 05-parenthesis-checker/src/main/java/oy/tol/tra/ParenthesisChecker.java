@@ -61,5 +61,32 @@ public class ParenthesisChecker {
       //         throw an exception, wrong kind of parenthesis were in the text (e.g. "asfa ( asdf } sadf")
       // if the stack is not empty after all the characters have been handled
       //   throw an exception since the string has more opening than closing parentheses.
+      try {
+         int count = 0;
+         for (int i = 0; i < fromString.length(); i++) {
+             char currentChar = fromString.charAt(i);
+             if (currentChar == '(' || currentChar == '{' || currentChar == '[') {
+                 stack.push(currentChar);
+                 count++;
+             } else if (currentChar == ')' || currentChar == '}' || currentChar == ']') {
+                 if (stack.isEmpty()) {
+                     throw new ParenthesesException("There are too many closing parentheses", 1);
+                 }
+                 char latestOpening = stack.pop();
+                 count++;
+                 if ((latestOpening == '(' && currentChar != ')') ||
+                         (latestOpening == '{' && currentChar != '}') ||
+                         (latestOpening == '[' && currentChar != ']')) {
+                     throw new ParenthesesException("Wrong kind of parenthesis in the text", 2);
+                 }
+             }
+         }
+         if (!stack.isEmpty()) {
+             throw new ParenthesesException("The string has more opening than closing parentheses", 3);
+         }
+         return count;
+     } catch (OutOfMemoryError e) {
+         throw new StackAllocationException("Insufficient memory to allocate or reallocate the stack");
+     }
    }
 }
