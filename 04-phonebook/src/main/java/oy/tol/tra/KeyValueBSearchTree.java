@@ -11,13 +11,13 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
 
     @Override
     public Type getType() {
-        return Type.NONE;
+        return Type.BST;
     }
 
     @Override
     public int size() {
-        // TODO: Implement this
-        return 0;
+
+        return count;
     }
 
     /**
@@ -50,19 +50,32 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
     public boolean add(K key, V value) throws IllegalArgumentException, OutOfMemoryError {
         // TODO: Implement this
         // Remember null check.
+        if (null == key || value == null)
+            throw new IllegalArgumentException("Person or phone number cannot be null");
         // If root is null, should go there.
+        if(root == null)
+        {
+            root = new TreeNode<>(key, value);
+            TreeNode.currentAddTreeDepth++;
+            count++;
+            return true;
+        }
         
+
             // update the root node. But it may have children
             // so do not just replace it with this new node but set
             // the keys and values for the already existing root.
-            
-        return false;
+       int tmp = root.insert(key, value, key.hashCode());
+       if(tmp == 1)
+            count++;
+        return true;
     }
 
     @Override
     public V find(K key) throws IllegalArgumentException {
         // TODO: Implement this. //Think about this
-        return (null);
+        if (null == key) throw new IllegalArgumentException("Person to find cannot be null");
+        return root.find(key, key.hashCode());
     }
 
     @Override
