@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: oy.tol.tira.books.CorrectnessTests
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 166.81 s <<< FAILURE! - in oy.tol.tira.books.CorrectnessTests
+testBulkFile  Time elapsed: 142.359 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Failed to print out the report. ==> Unexpected exception thrown: java.lang.StackOverflowError
+	at oy.tol.tira.books.CorrectnessTests.testBulkFile(CorrectnessTests.java:239)
+Caused by: java.lang.StackOverflowError
+
+testWarPeaceFile  Time elapsed: 24.262 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Failed to print out the report. ==> Unexpected exception thrown: java.lang.StackOverflowError
+	at oy.tol.tira.books.CorrectnessTests.testWarPeaceFile(CorrectnessTests.java:203)
+Caused by: java.lang.StackOverflowError
+

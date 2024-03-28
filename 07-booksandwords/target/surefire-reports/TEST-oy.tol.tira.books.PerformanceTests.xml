@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="oy.tol.tira.books.PerformanceTests" time="7.012" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes;C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\classes;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Lenovo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Lenovo\.m2\repository\com\kennycason\kumo-core\1.28\kumo-core-1.28.jar;C:\Users\Lenovo\.m2\repository\com\kennycason\kumo-api\1.28\kumo-api-1.28.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\Users\Lenovo\.m2\repository\com\github\davidmoten\rtree\0.8.6\rtree-0.8.6.jar;C:\Users\Lenovo\.m2\repository\com\github\davidmoten\guava-mini\0.1.1\guava-mini-0.1.1.jar;C:\Users\Lenovo\.m2\repository\io\reactivex\rxjava\1.3.8\rxjava-1.3.8.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6987954771310386610\surefirebooter3412964415463874016.jar C:\Users\Lenovo\AppData\Local\Temp\surefire6987954771310386610 2024-03-26T16-27-25_893-jvmRun1 surefire17795099516270870442tmp surefire_02950652749216244669tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes;C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\classes;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Lenovo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Lenovo\.m2\repository\com\kennycason\kumo-core\1.28\kumo-core-1.28.jar;C:\Users\Lenovo\.m2\repository\com\kennycason\kumo-api\1.28\kumo-api-1.28.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\Users\Lenovo\.m2\repository\com\github\davidmoten\rtree\0.8.6\rtree-0.8.6.jar;C:\Users\Lenovo\.m2\repository\com\github\davidmoten\guava-mini\0.1.1\guava-mini-0.1.1.jar;C:\Users\Lenovo\.m2\repository\io\reactivex\rxjava\1.3.8\rxjava-1.3.8.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Lenovo"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6987954771310386610\surefirebooter3412964415463874016.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.6+9-LTS-190"/>
+    <property name="user.name" value="Lenovo"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Lenovo\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lenovo\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.6"/>
+    <property name="user.dir" value="C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\20.04Ubuntu\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.6+9-LTS-190"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="handleTestFiles" classname="oy.tol.tira.books.PerformanceTests" time="7.012">
+    <error type="java.lang.StackOverflowError">java.lang.StackOverflowError
+</error>
+    <system-out><![CDATA[==> Starting to analyse book word.txt
+Listing words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\word.txt
+Ignoring words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\ignore-words.txt
+Sorting the results...
+...sorted.
+   1. heid?n..............      1
+Count of words in total: 1
+Count of unique words:    1
+Count of words to ignore:    39
+Ignored words count:      0
+maxProbingSteps count:      Tree has max depth of 0.
+Longest collision chain in a tree node is 1
+Min path height to bottom: 0
+Max path height to bottom: 0
+Ideal height if balanced: 0.0
+
+==> Starting to analyse book tiny.txt
+Listing words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\tiny.txt
+Ignoring words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\ignore-words.txt
+Sorting the results...
+...sorted.
+   1. words...............      4
+   2. file................      3
+   3. has.................      2
+   4. counted.............      2
+   5. they................      2
+   6. this................      2
+   7. it..................      1
+   8. is..................      1
+   9. so..................      1
+  10. or..................      1
+  11. either..............      1
+  12. because.............      1
+  13. short...............      1
+  14. algorithms..........      1
+  15. listed..............      1
+  16. to..................      1
+  17. too.................      1
+  18. count...............      1
+  19. also................      1
+  20. verify..............      1
+  21. total...............      1
+  22. easy................      1
+  23. number..............      1
+  24. by..................      1
+  25. not.................      1
+  26. in..................      1
+  27. only................      1
+  28. ignore..............      1
+  29. that................      1
+Count of words in total: 38
+Count of unique words:    29
+Count of words to ignore:    39
+Ignored words count:      6
+maxProbingSteps count:      Tree has max depth of 0.
+Longest collision chain in a tree node is 1
+Min path height to bottom: 3
+Max path height to bottom: 7
+Ideal height if balanced: 4.0
+
+==> Starting to analyse book small.txt
+Listing words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\small.txt
+Ignoring words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\ignore-words.txt
+Sorting the results...
+...sorted.
+   1. in..................     78
+   2. chapter.............     72
+   3. from................     60
+   4. programming.........     42
+   5. inheritance.........     42
+   6. passages............     42
+   7. to..................     42
+   8. you.................     36
+   9. algorithms..........     36
+  10. trees...............     30
+  11. course..............     30
+  12. containers..........     24
+  13. is..................     24
+  14. can.................     24
+  15. pattern.............     24
+  16. vol.................     24
+  17. library.............     24
+  18. dynamic.............     24
+  19. with................     24
+  20. object..............     24
+  21. only................     18
+  22. multiple............     18
+  23. there...............     18
+  24. on..................     18
+  25. binary..............     18
+  26. should..............     18
+  27. eckell..............     18
+  28. as..................     18
+  29. also................     18
+  30. passage.............     18
+  31. book................     18
+  32. books...............     18
+  33. find................     18
+  34. covered.............     18
+  35. template............     18
+  36. be..................     13
+  37. basics..............     12
+  38. structures..........     12
+  39. class...............     12
+  40. this................     12
+  41. generic.............     12
+  42. based...............     12
+  43. material............     12
+  44. tree................     12
+  45. no..................     12
+  46. know................     12
+  47. not.................     12
+  48. web.................     12
+  49. exception...........     12
+  50. contents............     12
+  51. introduction........     12
+  52. pointers............     12
+  53. for.................     12
+  54. related.............     12
+  55. analysis............     12
+  56. will................     12
+  57. search..............     12
+  58. polymorphic.........     12
+  59. objects.............     12
+  60. files...............     12
+  61. patterns............     12
+  62. revealed............      7
+  63. following...........      7
+  64. good................      7
+  65. download............      7
+  66. have................      7
+  67. covers..............      7
+  68. rivest..............      7
+  69. stroustrup..........      7
+  70. many................      7
+  71. muldner.............      7
+  72. basic...............      7
+  73. primer..............      7
+  74. lippman.............      7
+  75. sections............      7
+  76. both................      7
+  77. things..............      7
+  78. example.............      7
+  79. weiss...............      7
+  80. thinkin.............      7
+  81. design..............      7
+  82. order...............      7
+  83. which...............      7
+  84. language............      7
+  85. topics..............      7
+  86. other...............      7
+  87. general.............      7
+  88. internet............      7
+  89. follows.............      7
+  90. cormen..............      7
+  91. leiserson...........      7
+  92. chapters............      7
+  93. all.................      7
+  94. methods.............      6
+  95. geometry............      6
+  96. growth..............      6
+  97. inserted............      6
+  98. allocation..........      6
+  99. data................      6
+ 100. theoretic...........      6
+Count of words in total: 2308
+Count of unique words:    233
+Count of words to ignore:    39
+Ignored words count:      425
+maxProbingSteps count:      Tree has max depth of 0.
+Longest collision chain in a tree node is 1
+Min path height to bottom: 3
+Max path height to bottom: 17
+Ideal height if balanced: 8.0
+
+==> Starting to analyse book MetaMorph.txt
+Listing words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\MetaMorph.txt
+Ignoring words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\ignore-words.txt
+Sorting the results...
+...sorted.
+   1. to..................    833
+   2. he..................    593
+   3. his.................    550
+   4. was.................    410
+   5. in..................    406
+   6. it..................    385
+   7. that................    360
+   8. had.................    352
+   9. gregor..............    298
+  10. as..................    253
+  11. with................    247
+  12. she.................    200
+  13. not.................    197
+  14. for.................    193
+  15. him.................    188
+  16. her.................    187
+  17. would...............    187
+  18. at..................    185
+  19. but.................    176
+  20. on..................    165
+  21. they................    163
+  22. all.................    153
+  23. this................    145
+  24. be..................    138
+  25. from................    134
+  26. you.................    132
+  27. room................    131
+  28. if..................    123
+  29. could...............    120
+  30. or..................    120
+  31. out.................    115
+  32. have................    112
+  33. there...............    108
+  34. father..............    102
+  35. sister..............    101
+  36. been................    101
+  37. so..................     98
+  38. gutenberg...........     94
+  39. mother..............     89
+  40. now.................     89
+  41. project.............     88
+  42. door................     87
+  43. himself.............     87
+  44. then................     84
+  45. any.................     84
+  46. no..................     84
+  47. up..................     84
+  48. back................     82
+  49. even................     82
+  50. by..................     79
+  51. into................     78
+  52. what................     77
+  53. work................     75
+  54. one.................     75
+  55. about...............     73
+  56. did.................     73
+  57. more................     72
+  58. their...............     70
+  59. when................     69
+  60. were................     67
+  61. way.................     64
+  62. them................     64
+  63. only................     63
+  64. do..................     61
+  65. other...............     59
+  66. time................     59
+  67. than................     57
+  68. tm..................     57
+  69. is..................     55
+  70. said................     51
+  71. just................     51
+  72. little..............     49
+  73. without.............     47
+  74. first...............     45
+  75. get.................     44
+  76. still...............     44
+  77. we..................     43
+  78. see.................     42
+  79. while...............     41
+  80. some................     41
+  81. which...............     41
+  82. before..............     40
+  83. made................     40
+  84. where...............     40
+  85. go..................     40
+  86. again...............     39
+  87. much................     39
+  88. like................     38
+  89. chief...............     38
+  90. after...............     38
+  91. head................     38
+  92. clerk...............     37
+  93. who.................     36
+  94. an..................     35
+  95. open................     35
+  96. down................     35
+  97. away................     35
+  98. very................     35
+  99. samsa...............     34
+ 100. can.................     34
+Count of words in total: 22128
+Count of unique words:    2967
+Count of words to ignore:    39
+Ignored words count:      3404
+maxProbingSteps count:      Tree has max depth of 0.
+Longest collision chain in a tree node is 1
+Min path height to bottom: 4
+Max path height to bottom: 27
+Ideal height if balanced: 11.0
+
+==> Starting to analyse book Species.txt
+Listing words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\Species.txt
+Ignoring words from a file: C:\college\seniorYear\DSA\MyReporsity\LuRenxi-DSA\07-booksandwords\target\test-classes\ignore-words.txt
+Sorting the results...
+]]></system-out>
+  </testcase>
+</testsuite>

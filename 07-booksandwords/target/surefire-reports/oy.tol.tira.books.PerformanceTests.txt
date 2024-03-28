@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: oy.tol.tira.books.PerformanceTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.012 s <<< FAILURE! - in oy.tol.tira.books.PerformanceTests
+handleTestFiles  Time elapsed: 7.012 s  <<< ERROR!
+java.lang.StackOverflowError
+
