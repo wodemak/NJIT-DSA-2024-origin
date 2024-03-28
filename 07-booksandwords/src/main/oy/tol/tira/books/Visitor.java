@@ -1,5 +1,5 @@
 package oy.tol.tira.books;
 
-interface Visitor<V> {
-     void visit(TreeNode<V> node);
+interface Visitor<K extends Comparable<K>, V extends Comparable<V>> {
+     void visit(TreeNode<K,V> node);
  }

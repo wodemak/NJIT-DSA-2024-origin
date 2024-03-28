@@ -1,4 +1,7 @@
 package oy.tol.tira.books;
+
+import java.util.Objects;
+
 /**
  * Class Pair defines a key-value -pair of objects where each key has an
  * associated value.
@@ -6,7 +9,7 @@ package oy.tol.tira.books;
  * Keys must implement the Comparable interface. Equality is determined by
  * comparing keys.
  */
-public class Pair<K extends Comparable<K>, V> implements Comparable<Pair<K, V>> {
+public class Pair<K, V extends Comparable<V>> implements Comparable<Pair<K, V>> {
    private K key;
    private V value;
 
@@ -32,30 +35,29 @@ public class Pair<K extends Comparable<K>, V> implements Comparable<Pair<K, V>> 
    }
 
    @Override
-   public int compareTo(Pair<K, V> o) {
-      return key.compareTo(o.key);
+   public int compareTo(Pair<K, V> other) {
+      // Compare pairs based on value
+      return this.getValue().compareTo(other.getValue());
    }
 
    @Override
    public boolean equals(Object obj) {
-      if (this == obj) {
-         return true;
-      }
-      if (obj == null) {
-         return false;
-      }
-      if (getClass() != obj.getClass()) {
-         return false;
-      }
-      Pair<?,?> other = (Pair<?,?>) obj;
-      if (key == null) {
-         if (other.key != null) {
-            return false;
-         }
-      } else if (!key.equals(other.key)) {
-         return false;
-      }
-      return true;
+      if (this == obj) return true;
+      if (obj == null || getClass() != obj.getClass()) return false;
+      Pair<?, ?> other = (Pair<?, ?>) obj;
+      if (!Objects.equals(key, other.key)) return false;
+      return Objects.equals(value, other.value);
    }
 
+   @Override
+   public int hashCode() {
+      int result = key != null ? key.hashCode() : 0;
+      result = 31 * result + (value != null ? value.hashCode() : 0);
+      return result;
+   }
+
+   @Override
+   public String toString() {
+      return "Pair{" + "key=" + key + ", value=" + value + '}';
+   }
 }
