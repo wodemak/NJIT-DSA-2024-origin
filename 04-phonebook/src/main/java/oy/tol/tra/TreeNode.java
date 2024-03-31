@@ -8,10 +8,9 @@ class TreeNode<K extends Comparable<K>, V> {
    TreeNode<K, V> right = null;
    static int currentAddTreeDepth = 0;
    static int longestCollisionChain = 0;
-   // OPTIONAL Handling collisions with a linked list in the tree node.
    LinkedListImplementation<Pair<K,V>> list = null;
    
-   // Needed for searching by key; value is not then needed.
+   
    TreeNode(K key) throws NullPointerException {
       if (null == key)
          throw new NullPointerException("K cannot be null");

@@ -1,118 +1,118 @@
 package oy.tol.tra;
 
+import java.util.Comparator;
 import java.util.function.Predicate;
 
 public class Algorithms {
-   public static <T extends Comparable<T>> void sort(T[] array) {
-
-      int i = array.length - 1;
-
-      for (int j = i; j > 0; --j) {
-         for (int k = 0; k <= j - 1; ++k) {
-            if (array[k].compareTo(array[k + 1]) > 0) {
-               T tmp = array[k];
-               array[k] = array[k + 1];
-               array[k + 1] = tmp;
-            }
-         }
-      }
-
-   }
-   public static <T > void swap(T[] array, int x, int y) {
-
-      T tmp = array[x];
-      array[x] = array[y];
-      array[y] = tmp;
-   }
-   // ...
-   public static <T> void reverse(T[] array) {
-
-      int i = 0;
-      while (i < array.length / 2) {
-         T temp = array[i];
-         array[i] = array[array.length - i - 1];
-         array[array.length - i - 1] = temp;
-         i++;
-      }
-
-   }
-
-   public static <T extends Comparable<T>> int binarySearch(T aValue, T[] fromArray, int fromIndex, int toIndex) {
-      int l = fromIndex - 1;
-      int r = toIndex + 1;
-      while (l + 1 != r) {
-         int mid = (l + r) / 2;
-         if (fromArray[mid].compareTo(aValue) >= 0) {
-            r = mid;
-         } else {
-            l = mid;
-         }
-      }
-      if (r >= toIndex + 1) {
-         return -1;
-      }
-      if (!fromArray[r].equals(aValue)) {
-         return -1;
-      }
-      return r;
-   }
-
-   private static <E extends Comparable<E>> int partition(E[] array, int begin, int end) {
-      // implement partition here...
-      E x = array[end];
-      int i = begin - 1;
-      for (int j = begin; j <= end - 1; ++j) {
-         if (array[j].compareTo(x) <= 0) {
-            i = i + 1;
-            E tmp = array[i];
+    public static <T> void reverse(T[] array) {
+        int i = 0;
+        int j = array.length - 1;
+        while (i < j) {
+            T temp = array[i];
             array[i] = array[j];
-            array[j] = tmp;
-         }
-      }
-      E tmp = array[i + 1];
-      array[i + 1] = array[end];
-      array[end] = tmp;
-      return i + 1;
-   }
+            array[j] = temp;
+            i++;
+            j--;
+        }
+    }
 
-   public static <E extends Comparable<E>> void quickSort(E[] array, int begin, int end) {
-      if (begin < end) {
-         int q = partition(array, begin, end);
-         quickSort(array, begin, q - 1);
-         quickSort(array, q + 1, end);
-      }
-   }
+    public static <T> int slowLinearSearch(T aValue, T[] fromArray, int fromIndex, int toIndex) {
+        for (int index = fromIndex; index < toIndex; index++) {
+            if (fromArray[index].equals(aValue)) {
+                return index;
+            }
+        }
+        return -1;
+    }
 
-   public static <E extends Comparable<E>> void fastSort(E[] array) {
-      quickSort(array, 0, array.length - 1);
-   }
+    public static <T extends Comparable<T>> int binarySearch(T aValue, T[] fromArray, int fromIndex, int toIndex) {
+        while (fromIndex <= toIndex) {
+            int midIndex = fromIndex + (toIndex - fromIndex) / 2;
+            int compareResult = fromArray[midIndex].compareTo(aValue);
+            if (compareResult == 0) {
+                return midIndex;
+            } else if (compareResult < 0) {
+                fromIndex = midIndex + 1;
+            } else {
+                toIndex = midIndex - 1;
+            }
+        }
+        return -1;
+    }
 
-   public static <T> int partitionByRule(T[] array, int count, Predicate<T> rule) {
-      // Find first element rules applies to.
-      // Index of that element will be in variable index.
-      int index = 0;
-      for (; index < count; index++) {
-         if (rule.test(array[index])) {
-            break;
-         }
-      }
-      // If went to the end, nothing was selected so quit here.
-      if (index >= count) {
-         return count;
-      }
-      // Then start finding not selected elements starting from next from index.
-      // If the element is not selected, swap it with the selected one.
-      int nextIndex = index + 1;
-      // Until end of array reached.
-      while (nextIndex != count) {
-         if (!rule.test(array[nextIndex])) {
-            swap(array, index, nextIndex);
-            // If swapping was done, add to index since now it has non-selected element.
-            index++;
-         }
-         nextIndex++;
-      }
-      return index;
-   }
+    public static <E extends Comparable<E>> void fastSort(E[] array) {
+        quickSort(array, 0, array.length - 1);
+    }
 
+    public static <E extends Comparable<E>> void quickSort(E[] array, int begin, int end) {
+        if (begin >= end) {
+            return;
+        }
+        int partitionIndex = partition(array, begin, end);
+        quickSort(array, begin, partitionIndex - 1);
+        quickSort(array, partitionIndex + 1, end);
+    }
+
+    private static <E extends Comparable<E>> int partition(E[] array, int begin, int end) {
+        E pivot = array[end];
+        int leftPointer = begin;
+        int rightPointer = end;
+        while (leftPointer < rightPointer) {
+            while (leftPointer < rightPointer && array[leftPointer].compareTo(pivot) < 0) {
+                leftPointer++;
+            }
+            while (leftPointer < rightPointer && array[rightPointer].compareTo(pivot) > 0) {
+                rightPointer--;
+            }
+            swap(array, leftPointer, rightPointer);
+        }
+        return leftPointer;
+    }
+
+    private static <E> void swap(E[] array, int index1, int index2) {
+        E temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
+
+    public static <T> int partitionByRule(T[] array, int count, Predicate<T> rule) {
+        int index = 0;
+        for (; index < count; index++) {
+            if (rule.test(array[index])) {
+                break;
+            }
+        }
+        
+        if (index >= count) {
+            return count;
+        }
+        
+        int nextIndex = index + 1;
+        
+        while (nextIndex != count) {
+            if (!rule.test(array[nextIndex])) {
+                swap(array, index, nextIndex);
+                
+                index++;
+            }
+            nextIndex++;
+        }
+        return index;
+    }
+
+    public static <T> void sortWithComparator(T[] array, Comparator<T> comparator) {
+        boolean swapped;
+        for (int i = 0; i < array.length - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (comparator.compare(array[j], array[j + 1]) > 0) {
+                    T temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) break;
+        }
+    }
 }

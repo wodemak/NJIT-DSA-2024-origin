@@ -16,9 +16,10 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
 
     @Override
     public int size() {
-
+        // TODO: Implement this
         return count;
     }
+
 
     /**
      * Prints out the statistics of the tree structure usage.
@@ -50,32 +51,42 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
     public boolean add(K key, V value) throws IllegalArgumentException, OutOfMemoryError {
         // TODO: Implement this
         // Remember null check.
-        if (null == key || value == null)
-            throw new IllegalArgumentException("Person or phone number cannot be null");
         // If root is null, should go there.
-        if(root == null)
-        {
-            root = new TreeNode<>(key, value);
-            TreeNode.currentAddTreeDepth++;
-            count++;
-            return true;
-        }
-        
 
-            // update the root node. But it may have children
-            // so do not just replace it with this new node but set
-            // the keys and values for the already existing root.
-       int tmp = root.insert(key, value, key.hashCode());
-       if(tmp == 1)
+        // update the root node. But it may have children
+        // so do not just replace it with this new node but set
+        // the keys and values for the already existing root.
+
+        if (key == null || value == null) {
+            throw new IllegalArgumentException("Neither key nor value can be null.");
+        }
+        if (root == null) {
+            root = new TreeNode<>(key, value);
             count++;
-        return true;
+            maxTreeDepth = 1; 
+            return true;
+        } else {
+            int depthBefore = TreeNode.currentAddTreeDepth;
+            int added = root.insert(key, value, key.hashCode());
+            int depthAfter = TreeNode.currentAddTreeDepth;
+            TreeNode.currentAddTreeDepth = 0;
+            if (added > 0) {
+                count++; 
+            }
+            if (depthAfter > maxTreeDepth) {
+                maxTreeDepth = depthAfter;
+            }
+            return added > 0;
+        }
     }
 
     @Override
     public V find(K key) throws IllegalArgumentException {
         // TODO: Implement this. //Think about this
-        if (null == key) throw new IllegalArgumentException("Person to find cannot be null");
-        return root.find(key, key.hashCode());
+        if (key == null) {
+            throw new IllegalArgumentException("Key cannot be null.");
+        }
+        return (root != null) ? root.find(key, key.hashCode()) : null;
     }
 
     @Override
