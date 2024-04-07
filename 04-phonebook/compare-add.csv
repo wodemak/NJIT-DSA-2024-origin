@@ -1,22 +1,22 @@
 ** Analysing add(key, value) speed **
 testfile,bytes,elements,time (ms)
 Binary search tree:
-village.txt,4561,100,5
-small-town.txt,44892,1000,7
-town.txt,451617,10000,49
-large-town.txt,2255053,50000,148
-city.txt,4511688,100000,164
-large-city.txt,22554540,500000,1091
-metropolis.txt,45107513,1000000,2323
-capital.txt,90209834,2000000,4868
-megalopolis.txt,227564229,5000000,15630
-Hashtable:
 village.txt,4561,100,1
-small-town.txt,44892,1000,4
-town.txt,451617,10000,13
-large-town.txt,2255053,50000,110
-city.txt,4511688,100000,117
-large-city.txt,22554540,500000,653
-metropolis.txt,45107513,1000000,1252
-capital.txt,90209834,2000000,2843
-megalopolis.txt,227564229,5000000,7446
+small-town.txt,44892,1000,0
+town.txt,451617,10000,41
+large-town.txt,2255053,50000,69
+city.txt,4511688,100000,109
+large-city.txt,22554540,500000,878
+metropolis.txt,45107513,1000000,1897
+capital.txt,90209834,2000000,4636
+megalopolis.txt,227564229,5000000,13183
+Hashtable:
+village.txt,4561,100,0
+small-town.txt,44892,1000,7
+town.txt,451617,10000,16
+large-town.txt,2255053,50000,93
+city.txt,4511688,100000,152
+large-city.txt,22554540,500000,1015
+metropolis.txt,45107513,1000000,1737
+capital.txt,90209834,2000000,3858
+megalopolis.txt,227564229,5000000,8241
